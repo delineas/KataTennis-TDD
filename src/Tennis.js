@@ -53,15 +53,15 @@ var TennisClass = function(){
 		this.points[player.name] += 1;
 		setMatchDeuce();
 		if(this.matchDeuce && this.points[player.name] == 4) {
-			if(this.advantage == '') {
+			if(this.advantage === '') {
 				this.advantage = player.name;
 			}
-			else if(this.advantage != '') {
+			else if(this.advantage !== '') {
 				if(this.advantage == player.name) {
 					this.winner = player;
 				}
 				this.advantage = '';
-			} 
+			}
 			this.points[player.name] -= 1;
 		}
 		else if(this.points[player.name] == 4)
@@ -75,12 +75,12 @@ var TennisClass = function(){
 		_.each(this.players, function(player){
 			var pointsTrans = translatePoints(player);
 			scores.push(pointsTrans);
-		})
+		});
 		scoreboard = scores.join(' - ');
-		if(this.matchDeuce && this.advantage == '') {
+		if(this.matchDeuce && this.advantage === '') {
 			scoreboard = 'Deuce';
 		}
-		else if(this.advantage != '') {
+		else if(this.advantage !== '') {
 			scoreboard = 'Advantage '+this.advantage;
 		}
 		return scoreboard;
