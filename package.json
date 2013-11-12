@@ -1,0 +1,19 @@
+{
+  "name": "KataTennis",
+  "version": "0.0.1",
+  "description": "Kata Tennis Solution (TDD exercise)",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": { 
+    "mocha": "~1.8.1", 
+    "underscore": ">=1.5.2",
+    "expectjs": ">=0.2.0"
+  },
+  "author": {
+    "name": "Daniel Primo",
+    "url": "www.danielprimo.es",
+    "email": "delineas@gmail.com"
+  },
+  "license": "BSD-2-Clause"
+}
